@@ -63,21 +63,14 @@ class TeamMemberListViewController: UIViewController, TeamMemberDataSourceDelega
     
     func setupDatasource() {
         self.tableView.dataSource = teamMemberDataSource
-        self.tableView.reloadData()
+        self.tableView.delegate = teamMemberDataSource
     }
     
     func teamMemberSelected(teamMember: TeamMember) {
         // navigate to Team Member Screen with selected team member
-    }
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if let path = self.tableView.indexPathForSelectedRow() {
-            if segue.identifier == "showPlayerDetail" {
-                let sessionVC = segue.destinationViewController as! TrainingSessionExerciseViewController
-                // TODO: Assign a value to load the training session info
-                
-            }
-        }
+//        let teamMemberVC = TeamMemberDetailViewController()
+//        teamMemberVC.team
+//        self.navigationController?.pushViewController(teamMemberVC, animated: true)
         
     }
 

@@ -54,14 +54,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Team" image="team" id="352-RC-qEY"/>
+                    <navigationItem key="navigationItem" id="jwE-hs-VzJ"/>
                     <connections>
                         <outlet property="tableView" destination="Zk9-sG-V8a" id="zo4-H0-RKI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aUu-cQ-cAi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="285" y="1105"/>
+            <point key="canvasLocation" x="1097" y="1105"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="vPB-GM-wFb">
@@ -75,7 +75,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="IMz-TJ-fZc" kind="relationship" relationship="viewControllers" id="fJg-J4-aZg"/>
-                        <segue destination="RAb-9p-rfO" kind="relationship" relationship="viewControllers" id="hee-5R-XIl"/>
+                        <segue destination="PEF-3j-yOM" kind="relationship" relationship="viewControllers" id="hee-5R-XIl"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FlG-ak-dX7" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -338,7 +338,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kdu-9h-R4Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="964" y="1106"/>
+            <point key="canvasLocation" x="1776" y="1106"/>
         </scene>
         <!--Training Session Completion-->
         <scene sceneID="ypE-Xn-CxT">
@@ -395,6 +395,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qcg-s3-Wr7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1654" y="405"/>
+        </scene>
+        <!--Team-->
+        <scene sceneID="V60-0R-CZ6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PEF-3j-yOM" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Team" image="team" id="352-RC-qEY"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="AWB-hs-At4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="RAb-9p-rfO" kind="relationship" relationship="rootViewController" id="k6b-ba-Myl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QIl-V6-f2k" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="285" y="1105"/>
         </scene>
     </scenes>
     <resources>

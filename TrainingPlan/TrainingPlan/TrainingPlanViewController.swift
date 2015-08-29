@@ -63,21 +63,15 @@ class TrainingPlanViewController: UIViewController,TrainingPlanDataSourceDelegat
     
     func setupDatasource() {
         self.tableView.dataSource = planDataSource
-        self.tableView.reloadData()
+        self.tableView.delegate = planDataSource
     }
     
     func trainingPlanItemSelected(exercise: TrainingPlanExercise) {
         // navigate to Exercise Screen with selected exercise
+        // navigate to Team Member Screen with selected team member
+        let sessionVC = TrainingSessionExerciseViewController()
+        self.navigationController?.pushViewController(sessionVC, animated: true)
+
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if let path = self.tableView.indexPathForSelectedRow() {
-            if segue.identifier == "showSessionExercise" {
-                let sessionVC = segue.destinationViewController as! TrainingSessionExerciseViewController
-                // TODO: Assign a value to load the training session info
-                
-            }
-        }
-    }
-
 }
