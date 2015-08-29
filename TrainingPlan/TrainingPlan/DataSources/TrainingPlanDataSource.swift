@@ -33,7 +33,7 @@ class TrainingPlanDataSource:NSObject, UITableViewDataSource,UITableViewDelegate
     
     internal func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let tableCell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! UITableViewCell
+        let tableCell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! TrainingPlanItemTableViewCell
         
         let planExercise = self.itemAtIndexPath(indexPath) as TrainingPlanExercise
         

@@ -31,7 +31,7 @@
 		648A4FA91B915DB500B78C2B /* TrainingSessionCompletionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648A4FA81B915DB500B78C2B /* TrainingSessionCompletionViewModel.swift */; };
 		648A4FAC1B916A1000B78C2B /* TempClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648A4FAB1B916A1000B78C2B /* TempClasses.swift */; };
 		648A4FAF1B9186D400B78C2B /* TrainingPlanDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648A4FAE1B9186D400B78C2B /* TrainingPlanDataSource.swift */; };
-		648A4FB21B91B93300B78C2B /* TrainingPlanTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648A4FB11B91B93300B78C2B /* TrainingPlanTableViewCell.swift */; };
+		648A4FB21B91B93300B78C2B /* TrainingPlanItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648A4FB11B91B93300B78C2B /* TrainingPlanItemTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,7 +104,7 @@
 		648A4FA81B915DB500B78C2B /* TrainingSessionCompletionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainingSessionCompletionViewModel.swift; sourceTree = "<group>"; };
 		648A4FAB1B916A1000B78C2B /* TempClasses.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TempClasses.swift; sourceTree = "<group>"; };
 		648A4FAE1B9186D400B78C2B /* TrainingPlanDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainingPlanDataSource.swift; sourceTree = "<group>"; };
-		648A4FB11B91B93300B78C2B /* TrainingPlanTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainingPlanTableViewCell.swift; sourceTree = "<group>"; };
+		648A4FB11B91B93300B78C2B /* TrainingPlanItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainingPlanItemTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -277,7 +277,7 @@
 		648A4FB01B91B8F200B78C2B /* TableViewCells */ = {
 			isa = PBXGroup;
 			children = (
-				648A4FB11B91B93300B78C2B /* TrainingPlanTableViewCell.swift */,
+				648A4FB11B91B93300B78C2B /* TrainingPlanItemTableViewCell.swift */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -446,7 +446,7 @@
 				648A4F521B91418F00B78C2B /* ViewController.swift in Sources */,
 				648A4FA91B915DB500B78C2B /* TrainingSessionCompletionViewModel.swift in Sources */,
 				648A4FAC1B916A1000B78C2B /* TempClasses.swift in Sources */,
-				648A4FB21B91B93300B78C2B /* TrainingPlanTableViewCell.swift in Sources */,
+				648A4FB21B91B93300B78C2B /* TrainingPlanItemTableViewCell.swift in Sources */,
 				648A4FA51B915D0900B78C2B /* TrainingPlanViewModel.swift in Sources */,
 				648A4FA71B915DA700B78C2B /* TrainingSessionExerciseViewModel.swift in Sources */,
 				648A4FAF1B9186D400B78C2B /* TrainingPlanDataSource.swift in Sources */,
@@ -737,6 +737,7 @@
 				648A4F6B1B91418F00B78C2B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		648A4F6C1B91418F00B78C2B /* Build configuration list for PBXNativeTarget "TrainingPlanTests" */ = {
 			isa = XCConfigurationList;
@@ -745,6 +746,7 @@
 				648A4F6E1B91418F00B78C2B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		648A4F911B9141B900B78C2B /* Build configuration list for PBXNativeTarget "TrainingPlan WatchKit App" */ = {
 			isa = XCConfigurationList;
@@ -753,6 +755,7 @@
 				648A4F931B9141B900B78C2B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		648A4F941B9141B900B78C2B /* Build configuration list for PBXNativeTarget "TrainingPlan WatchKit Extension" */ = {
 			isa = XCConfigurationList;
@@ -761,6 +764,7 @@
 				648A4F961B9141B900B78C2B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

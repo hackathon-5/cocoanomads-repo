@@ -1,5 +1,5 @@
 //
-//  TrainingPlanTableViewCell.swift
+//  TrainingPlanItemTableViewCell.swift
 //  TrainingPlan
 //
 //  Created by Alondo  on 8/29/15.
@@ -9,9 +9,9 @@
 import Foundation
 import UIKit
 
-class TrainingPlanTableViewCell: UITableViewCell {
+class TrainingPlanItemTableViewCell: UITableViewCell {
     func configureForItem(item: TrainingPlanExercise){
         self.textLabel!.text = item.exerciseName
-        self.detailTextLabel!.text = item.exerciseDescription
+        self.detailTextLabel?.text = "Item Description" //item.exerciseDescription
     }
 }

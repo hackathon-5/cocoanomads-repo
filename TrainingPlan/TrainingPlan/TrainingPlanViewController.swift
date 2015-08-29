@@ -9,6 +9,8 @@
 import UIKit
 
 class TrainingPlanViewController: UIViewController {
+    
+    let trainingPlanItemCellIdentifier = "TrainingPlanItemCell"
     var exerciseList: [TrainingPlanExercise]
     var planTitle: String
    
@@ -27,7 +29,10 @@ class TrainingPlanViewController: UIViewController {
     }
 
     required init(coder aDecoder: NSCoder) {
+        // loading sample data
+        // TODO: replace with real data
         let trainingPlan = TrainingPlan.sampleTrainingPlan()
+        
         viewModel = TrainingPlanViewModelFromTrainingPlan(trainingPlan)
         exerciseList = viewModel.exerciseList
         planTitle = viewModel.title
@@ -36,11 +41,13 @@ class TrainingPlanViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.tableView.registerClass(TrainingPlanItemTableViewCell.self, forCellReuseIdentifier: trainingPlanItemCellIdentifier)
 
         dataSource = TrainingPlanDataSource(items: TrainingPlan.sampleTrainingPlan().planExerciseList,
-            cellIdentifier: "Cell",
+            cellIdentifier: trainingPlanItemCellIdentifier,
             configureBlock: { (cell, item) -> () in
-                if let actualCell = cell as? TrainingPlanTableViewCell {
+                if let actualCell = cell as? TrainingPlanItemTableViewCell {
                     if let actualItem = item as? TrainingPlanExercise {
                         actualCell.configureForItem(actualItem)
                     }
@@ -55,9 +62,10 @@ class TrainingPlanViewController: UIViewController {
     }
     
     func setupDatasource() {
-       tableView.dataSource = dataSource
+        self.tableView.dataSource = dataSource
+        self.tableView.reloadData()
     }
-
+    
     
     /*
     // MARK: - Navigation
