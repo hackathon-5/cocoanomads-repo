@@ -54,14 +54,7 @@ class TrainingPlanViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
-    func configureCell(cell:UITableViewCell, planExercise:TrainingPlanExercise) {
-        
-       
-       
-    }
-    
     func setupDatasource() {
-
        tableView.dataSource = dataSource
     }
 
