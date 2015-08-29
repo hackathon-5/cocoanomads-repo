@@ -16,9 +16,14 @@ class WTrainingPlanTableInterfaceController: WKInterfaceController {
     
     let trainingPlanTableRowID = "TrainingPlanTableRowID"
     let wExerciseInterfaceControllerID = "WExerciseInterfaceControllerID"
+    let wTeamMemberTableIC = "WTeamMemberTableIC"
+
 
     @IBOutlet weak var table: WKInterfaceTable!
     
+    @IBAction func onMenuPeople() {
+        presentControllerWithName(wTeamMemberTableIC, context: nil)
+    }
     @IBAction func onMenuReset() {
         trainingPlanSession.resetCompleted()
         updateCompleted()

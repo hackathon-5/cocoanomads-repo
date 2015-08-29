@@ -29,9 +29,14 @@
                     </items>
                     <menu key="menu" id="bqg-np-7Hd">
                         <items>
-                            <menuItem title="Reset" icon="repeat" id="GH4-pY-DdE">
+                            <menuItem title="People" icon="info" id="GH4-pY-DdE">
                                 <connections>
-                                    <action selector="onMenuReset" destination="AgC-eL-Hgc" id="P2f-7E-jaD"/>
+                                    <action selector="onMenuPeople" destination="AgC-eL-Hgc" id="9Ek-h4-Mwi"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Reset" icon="repeat" id="XBJ-eu-7ZX">
+                                <connections>
+                                    <action selector="onMenuReset" destination="AgC-eL-Hgc" id="f6z-2g-iZH"/>
                                 </connections>
                             </menuItem>
                         </items>
@@ -41,7 +46,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="144" y="355"/>
+            <point key="canvasLocation" x="76" y="349"/>
         </scene>
         <!--Glance Interface Controller-->
         <scene sceneID="BOz-TT-tkC">
@@ -101,14 +106,64 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="325" y="355"/>
+            <point key="canvasLocation" x="296" y="416"/>
         </scene>
         <!--Completed-->
         <scene sceneID="Go0-vX-4Pj">
             <objects>
                 <controller identifier="WPlanCompletionIC" title="Completed" id="XnR-4v-iGx" customClass="WPlanCompletionInterfaceController" customModule="TrainingPlan_WatchKit_Extension"/>
             </objects>
-            <point key="canvasLocation" x="506" y="355"/>
+            <point key="canvasLocation" x="475" y="422"/>
+        </scene>
+        <!--Team-->
+        <scene sceneID="oES-nU-a7V">
+            <objects>
+                <controller identifier="WTeamMemberTableIC" title="Team" id="7wS-FN-Yc4" customClass="WTeamMemberTableInterfaceController" customModule="TrainingPlan_WatchKit_Extension">
+                    <items>
+                        <table alignment="left" id="W7G-TF-Lnc">
+                            <items>
+                                <tableRow identifier="TeamMemberTableRowID" id="D1U-bX-9pf" customClass="WTeamMemberTableRow" customModule="TrainingPlan_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="5Py-cl-rag">
+                                        <items>
+                                            <label alignment="left" text="Label" id="Hxl-Dt-iwu"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="nameLabel" destination="Hxl-Dt-iwu" id="z5G-WJ-RaF"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <menu key="menu" id="HXE-M0-aRa">
+                        <items>
+                            <menuItem title="Me" icon="info" id="57k-5Q-oKO">
+                                <connections>
+                                    <action selector="onMenuMe" destination="7wS-FN-Yc4" id="ZXX-0O-k9L"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                    <connections>
+                        <outlet property="table" destination="W7G-TF-Lnc" id="PaY-ka-qqF"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="296" y="186"/>
+        </scene>
+        <!--Member-->
+        <scene sceneID="oKl-Bw-nyY">
+            <objects>
+                <controller identifier="WTeamMemberDetailIC" title="Member" id="rDN-NL-Gzd" customClass="WTeamMemberDetailInterfaceController" customModule="TrainingPlan_WatchKit_Extension">
+                    <items>
+                        <label alignment="center" verticalAlignment="center" text="Label" id="mTv-cC-wYM"/>
+                    </items>
+                    <connections>
+                        <outlet property="nameLabel" destination="mTv-cC-wYM" id="eMm-pY-Pmt"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="475" y="186"/>
         </scene>
     </scenes>
 </document>
