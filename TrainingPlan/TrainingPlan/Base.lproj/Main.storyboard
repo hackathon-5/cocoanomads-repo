@@ -74,10 +74,10 @@
             </objects>
             <point key="canvasLocation" x="911" y="389"/>
         </scene>
-        <!--Exercise -->
+        <!--Training Session Exercise -->
         <scene sceneID="SSH-OO-97i">
             <objects>
-                <viewController title="Exercise " id="9Xz-hF-TQx" sceneMemberID="viewController">
+                <viewController title="Training Session Exercise " id="9Xz-hF-TQx" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZGi-RA-F2c"/>
                         <viewControllerLayoutGuide type="bottom" id="A2Z-yG-xpo"/>
@@ -133,10 +133,10 @@
             </objects>
             <point key="canvasLocation" x="1604" y="389"/>
         </scene>
-        <!--Plan Completion-->
+        <!--Training Session Completion-->
         <scene sceneID="ypE-Xn-CxT">
             <objects>
-                <viewController title="Plan Completion" id="E7u-x2-a5P" sceneMemberID="viewController">
+                <viewController title="Training Session Completion" id="E7u-x2-a5P" customClass="TrainingSessionCompletionViewController" customModule="TrainingPlan" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="E5k-0A-eBm"/>
                         <viewControllerLayoutGuide type="bottom" id="Vhx-JL-ZaW"/>
@@ -145,7 +145,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Congratulations" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Wp-Jd-g4p" userLabel="SuccessLabel">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Congratulations" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Wp-Jd-g4p" userLabel="SessionResultLabel">
                                 <rect key="frame" x="72" y="42" width="453" height="50.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="42"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -180,6 +180,10 @@
                             <constraint firstItem="8Wp-Jd-g4p" firstAttribute="leading" secondItem="08P-Au-BsF" secondAttribute="leadingMargin" constant="56" id="nKi-Jn-PMc"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="sessionResultLabel" destination="8Wp-Jd-g4p" id="BEg-9z-Zvy"/>
+                        <outlet property="teamWorkSessionInfoLabel" destination="xWe-8H-BXj" id="8Wo-Y2-QHi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qcg-s3-Wr7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

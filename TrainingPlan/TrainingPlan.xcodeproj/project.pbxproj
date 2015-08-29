@@ -21,6 +21,14 @@
 		648A4F8B1B9141B900B78C2B /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 648A4F891B9141B900B78C2B /* Interface.storyboard */; };
 		648A4F8D1B9141B900B78C2B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 648A4F8C1B9141B900B78C2B /* Images.xcassets */; };
 		648A4F901B9141B900B78C2B /* TrainingPlan WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 648A4F731B9141B900B78C2B /* TrainingPlan WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		648A4F991B9158F400B78C2B /* TrainingPlanListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648A4F981B9158F400B78C2B /* TrainingPlanListViewController.swift */; };
+		648A4F9B1B91594800B78C2B /* TrainingPlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648A4F9A1B91594800B78C2B /* TrainingPlanViewController.swift */; };
+		648A4F9D1B91598B00B78C2B /* TrainingSessionExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648A4F9C1B91598B00B78C2B /* TrainingSessionExerciseViewController.swift */; };
+		648A4F9F1B9159D500B78C2B /* TrainingSessionCompletionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648A4F9E1B9159D500B78C2B /* TrainingSessionCompletionViewController.swift */; };
+		648A4FA31B915CF200B78C2B /* TrainingPlanListItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648A4FA21B915CF200B78C2B /* TrainingPlanListItemViewModel.swift */; };
+		648A4FA51B915D0900B78C2B /* TrainingPlanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648A4FA41B915D0900B78C2B /* TrainingPlanViewModel.swift */; };
+		648A4FA71B915DA700B78C2B /* TrainingSessionExerciseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648A4FA61B915DA700B78C2B /* TrainingSessionExerciseViewModel.swift */; };
+		648A4FA91B915DB500B78C2B /* TrainingSessionCompletionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648A4FA81B915DB500B78C2B /* TrainingSessionCompletionViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +91,14 @@
 		648A4F881B9141B900B78C2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		648A4F8A1B9141B900B78C2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		648A4F8C1B9141B900B78C2B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		648A4F981B9158F400B78C2B /* TrainingPlanListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TrainingPlanListViewController.swift; path = ../TrainingPlanListViewController.swift; sourceTree = "<group>"; };
+		648A4F9A1B91594800B78C2B /* TrainingPlanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TrainingPlanViewController.swift; path = ../TrainingPlanViewController.swift; sourceTree = "<group>"; };
+		648A4F9C1B91598B00B78C2B /* TrainingSessionExerciseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TrainingSessionExerciseViewController.swift; path = ../TrainingSessionExerciseViewController.swift; sourceTree = "<group>"; };
+		648A4F9E1B9159D500B78C2B /* TrainingSessionCompletionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TrainingSessionCompletionViewController.swift; path = ../TrainingSessionCompletionViewController.swift; sourceTree = "<group>"; };
+		648A4FA21B915CF200B78C2B /* TrainingPlanListItemViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainingPlanListItemViewModel.swift; sourceTree = "<group>"; };
+		648A4FA41B915D0900B78C2B /* TrainingPlanViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainingPlanViewModel.swift; sourceTree = "<group>"; };
+		648A4FA61B915DA700B78C2B /* TrainingSessionExerciseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainingSessionExerciseViewModel.swift; sourceTree = "<group>"; };
+		648A4FA81B915DB500B78C2B /* TrainingSessionCompletionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainingSessionCompletionViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +151,8 @@
 		648A4F4C1B91418F00B78C2B /* TrainingPlan */ = {
 			isa = PBXGroup;
 			children = (
+				648A4FA11B915A5400B78C2B /* ViewModels */,
+				648A4FA01B915A2700B78C2B /* ViewControllers */,
 				648A4F4F1B91418F00B78C2B /* AppDelegate.swift */,
 				648A4F511B91418F00B78C2B /* ViewController.swift */,
 				648A4F531B91418F00B78C2B /* Main.storyboard */,
@@ -207,6 +225,28 @@
 				648A4F881B9141B900B78C2B /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		648A4FA01B915A2700B78C2B /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				648A4F981B9158F400B78C2B /* TrainingPlanListViewController.swift */,
+				648A4F9A1B91594800B78C2B /* TrainingPlanViewController.swift */,
+				648A4F9C1B91598B00B78C2B /* TrainingSessionExerciseViewController.swift */,
+				648A4F9E1B9159D500B78C2B /* TrainingSessionCompletionViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		648A4FA11B915A5400B78C2B /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				648A4FA21B915CF200B78C2B /* TrainingPlanListItemViewModel.swift */,
+				648A4FA41B915D0900B78C2B /* TrainingPlanViewModel.swift */,
+				648A4FA61B915DA700B78C2B /* TrainingSessionExerciseViewModel.swift */,
+				648A4FA81B915DB500B78C2B /* TrainingSessionCompletionViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -371,7 +411,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				648A4F521B91418F00B78C2B /* ViewController.swift in Sources */,
+				648A4FA91B915DB500B78C2B /* TrainingSessionCompletionViewModel.swift in Sources */,
+				648A4FA51B915D0900B78C2B /* TrainingPlanViewModel.swift in Sources */,
+				648A4FA71B915DA700B78C2B /* TrainingSessionExerciseViewModel.swift in Sources */,
 				648A4F501B91418F00B78C2B /* AppDelegate.swift in Sources */,
+				648A4FA31B915CF200B78C2B /* TrainingPlanListItemViewModel.swift in Sources */,
+				648A4F9B1B91594800B78C2B /* TrainingPlanViewController.swift in Sources */,
+				648A4F9F1B9159D500B78C2B /* TrainingSessionCompletionViewController.swift in Sources */,
+				648A4F991B9158F400B78C2B /* TrainingPlanListViewController.swift in Sources */,
+				648A4F9D1B91598B00B78C2B /* TrainingSessionExerciseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
