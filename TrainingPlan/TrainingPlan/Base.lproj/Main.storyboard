@@ -74,7 +74,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="IMz-TJ-fZc" kind="relationship" relationship="viewControllers" id="fJg-J4-aZg"/>
+                        <segue destination="Wr1-bg-SXm" kind="relationship" relationship="viewControllers" id="fJg-J4-aZg"/>
                         <segue destination="PEF-3j-yOM" kind="relationship" relationship="viewControllers" id="hee-5R-XIl"/>
                     </connections>
                 </tabBarController>
@@ -94,7 +94,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="1fF-QV-YDq">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="1fF-QV-YDq">
                                 <rect key="frame" x="0.0" y="20" width="584" height="487"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -160,14 +160,14 @@
                             <constraint firstAttribute="trailingMargin" secondItem="1fF-QV-YDq" secondAttribute="trailing" id="oae-mR-8Cb"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Training" image="list" id="TVm-ce-PaS"/>
+                    <navigationItem key="navigationItem" id="Rlo-gp-y99"/>
                     <connections>
                         <outlet property="tableView" destination="1fF-QV-YDq" id="zel-EE-iAM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hfh-5K-Hl4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="285" y="405"/>
+            <point key="canvasLocation" x="1097" y="405"/>
         </scene>
         <!--Training Session Exercise -->
         <scene sceneID="SSH-OO-97i">
@@ -234,7 +234,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qi4-Hy-hZT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="966" y="405"/>
+            <point key="canvasLocation" x="1778" y="405"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="NUk-6e-LaY">
@@ -394,7 +394,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qcg-s3-Wr7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1654" y="405"/>
+            <point key="canvasLocation" x="2466" y="405"/>
         </scene>
         <!--Team-->
         <scene sceneID="V60-0R-CZ6">
@@ -414,6 +414,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QIl-V6-f2k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="285" y="1105"/>
+        </scene>
+        <!--Training-->
+        <scene sceneID="eCN-fj-qLq">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Wr1-bg-SXm" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Training" image="list" id="TVm-ce-PaS"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="r3o-5v-3Ir">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="IMz-TJ-fZc" kind="relationship" relationship="rootViewController" id="tPe-J9-4wL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4zr-9b-eLU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="285" y="405"/>
         </scene>
     </scenes>
     <resources>
