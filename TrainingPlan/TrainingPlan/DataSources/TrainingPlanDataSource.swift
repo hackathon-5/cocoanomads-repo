@@ -12,9 +12,14 @@ import UIKit
 
 typealias TableViewCellConfigureBlock = (cell:UITableViewCell, item:AnyObject?) -> ()
 
+protocol TrainingPlanDataSourceDelegate {
+    func trainingPlanItemSelected(exercise:TrainingPlanExercise)
+}
+
 class TrainingPlanDataSource:NSObject, UITableViewDataSource,UITableViewDelegate {
     
     var configureCellBlock:TableViewCellConfigureBlock?
+    var delegate: TrainingPlanDataSourceDelegate?
     
     var items: [AnyObject]
     var cellIdentifier: String
@@ -42,6 +47,11 @@ class TrainingPlanDataSource:NSObject, UITableViewDataSource,UITableViewDelegate
         }
         
         return tableCell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let selectedExercise = self.itemAtIndexPath(indexPath) as TrainingPlanExercise
+        self.delegate?.trainingPlanItemSelected(selectedExercise)
     }
     
     func itemAtIndexPath(indexPath: NSIndexPath)->TrainingPlanExercise {
