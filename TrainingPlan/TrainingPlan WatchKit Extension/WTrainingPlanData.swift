@@ -13,17 +13,14 @@ class WTrainingPlanData {
     
     
     var exerciseList:[WExerciseData] = [
-        WExerciseData(name: "Exercise 0"),
-        WExerciseData(name: "Exercise 1"),
-        WExerciseData(name: "Exercise 2"),
-        WExerciseData(name: "Exercise 3"),
-        WExerciseData(name: "Exercise 4"),
-        WExerciseData(name: "Exercise 5"),
-        WExerciseData(name: "Exercise 6"),
-        WExerciseData(name: "Exercise 7"),
-        WExerciseData(name: "Exercise 8"),
-        WExerciseData(name: "Exercise 9"),
-        WExerciseData(name: "Exercise 10")
+        WExerciseData(name: "Foam Rolling"),
+        WExerciseData(name: "IYT Rows"),
+        WExerciseData(name: "Physioball Side-Lying Hip Abduction"),
+        WExerciseData(name: "Single-Arm, Single-Leg RDL Row with Versapulley"),
+        WExerciseData(name: "TRX Inverted Row"),
+        WExerciseData(name: "Rope Pull"),
+        WExerciseData(name: "Dumbbell Deficit Reverse Lunge"),
+        WExerciseData(name: "TRX Plank"),
     ]
     
     var exerciseTotal:Int {

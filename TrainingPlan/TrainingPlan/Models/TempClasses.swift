@@ -18,9 +18,14 @@ class TrainingPlan {
     }
     
     class func sampleTrainingPlan() -> TrainingPlan {
-        let trainingPlan = TrainingPlan(name: "General Workout", exerciseList: [TrainingPlanExercise(name: "Push ups", description: "Push ups"), TrainingPlanExercise(name: "Sit ups", description: "Sit ups")
-            , TrainingPlanExercise(name: "Jumping Jacks", description: "Jumping Jacks")
-            , TrainingPlanExercise(name: "Box Squats", description: "Box Squats")])
+        let trainingPlan = TrainingPlan(name: "OffSeason Workout",
+            exerciseList: [TrainingPlanExercise(name: "Foam Rolling", description: "IYT Rows"),
+                TrainingPlanExercise(name: "Physioball Side-Lying Hip Abduction", description: "Sit ups"),
+                TrainingPlanExercise(name: "Single-Arm, Single-Leg RDL Row with Versapulley", description: "Jumping Jacks"),
+                TrainingPlanExercise(name: "TRX Inverted Row", description: "Box Squats"),
+                TrainingPlanExercise(name:"Rope Pull", description: "Box Squats"),
+                TrainingPlanExercise(name: "Dumbbell Deficit Reverse Lunge", description: "Box Squats"),
+                TrainingPlanExercise(name: "TRX Plank", description: "Box Squats")])
         return trainingPlan
     }
 }
