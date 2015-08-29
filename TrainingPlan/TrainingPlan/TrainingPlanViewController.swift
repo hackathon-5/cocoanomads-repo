@@ -9,19 +9,63 @@
 import UIKit
 
 class TrainingPlanViewController: UIViewController {
+    var exerciseList: [TrainingPlanExercise]
+    var planTitle: String
+   
+    @IBOutlet weak var tableView: UITableView!
+    var dataSource: TrainingPlanDataSource!
+    
+    var viewModel: TrainingPlanViewModel {
+        didSet {
+            planTitle = viewModel.title
+            exerciseList = viewModel.exerciseList
+        }
+    }
+    
+    convenience init () {
+        self.init()
+    }
+
+    required init(coder aDecoder: NSCoder) {
+        let trainingPlan = TrainingPlan.sampleTrainingPlan()
+        viewModel = TrainingPlanViewModelFromTrainingPlan(trainingPlan)
+        exerciseList = viewModel.exerciseList
+        planTitle = viewModel.title
+        super.init(coder: aDecoder)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        dataSource = TrainingPlanDataSource(items: TrainingPlan.sampleTrainingPlan().planExerciseList,
+            cellIdentifier: "Cell",
+            configureBlock: { (cell, item) -> () in
+                if let actualCell = cell as? TrainingPlanTableViewCell {
+                    if let actualItem = item as? TrainingPlanExercise {
+                        actualCell.configureForItem(actualItem)
+                    }
+                }
+              
+        })
+        setupDatasource()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
+    func configureCell(cell:UITableViewCell, planExercise:TrainingPlanExercise) {
+        
+       
+       
+    }
+    
+    func setupDatasource() {
 
+       tableView.dataSource = dataSource
+    }
+
+    
     /*
     // MARK: - Navigation
 

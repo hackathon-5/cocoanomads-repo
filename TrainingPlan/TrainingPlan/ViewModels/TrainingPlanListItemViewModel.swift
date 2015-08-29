@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 protocol TrainingPlanListItemViewModel {
     var planList: [TrainingPlanViewModel] { get }
 }
