@@ -68,10 +68,13 @@ class TrainingPlanViewController: UIViewController,TrainingPlanDataSourceDelegat
     
     func trainingPlanItemSelected(exercise: TrainingPlanExercise) {
         // navigate to Exercise Screen with selected exercise
-        // navigate to Team Member Screen with selected team member
-        let sessionVC = TrainingSessionExerciseViewController()
+        
+        let storyboard = UIStoryboard(name:"Main", bundle:nil)
+        let sessionVC = storyboard.instantiateViewControllerWithIdentifier("TrainingSessionExerciseViewController") as! TrainingSessionExerciseViewController
+        sessionVC.sessionExercise = exercise
+        sessionVC.title = "Detail"
+        
         self.navigationController?.pushViewController(sessionVC, animated: true)
-
     }
     
 }

@@ -9,45 +9,37 @@
 import UIKit
 
 class TrainingSessionExerciseViewController: UIViewController {
-    var sessionExercise : TrainingSessionExercise? {
+    
+    @IBOutlet weak var exerciseNameLabel : UILabel!
+    @IBOutlet weak var exerciseCompleteButton: UIButton!
+    @IBOutlet weak var exerciseCancelButton: UIButton!
+    
+    var sessionExercise : TrainingPlanExercise? {
         didSet {
-            self.configureView()
+            
         }
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.configureView()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-    
-    @IBAction func quit(sender:AnyObject) {
+    @IBAction func quit(sender:UIButton) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
-    @IBAction func complete(sender:AnyObject) {
+    @IBAction func complete(sender:UIButton) {
         
     }
 
     
     func configureView () {
-        
+        exerciseNameLabel.text = sessionExercise?.exerciseName
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
