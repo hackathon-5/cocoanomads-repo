@@ -200,10 +200,10 @@
                                     <constraint firstAttribute="bottom" secondItem="ITs-DB-or4" secondAttribute="bottom" id="rtu-Td-BLe"/>
                                 </constraints>
                             </view>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CQH-fu-YDf" userLabel="ButtonView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CQH-fu-YDf" userLabel="ButtonView">
                                 <rect key="frame" x="0.0" y="251" width="600" height="300"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o4L-s5-PG4">
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o4L-s5-PG4">
                                         <rect key="frame" x="378" y="135" width="48" height="30"/>
                                         <state key="normal" title="Cancel">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -212,7 +212,16 @@
                                             <action selector="quit:" destination="9Xz-hF-TQx" eventType="touchUpInside" id="kcP-YM-gCF"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9x4-es-gdS" userLabel="ExerciseCompleteButton">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="16X-Oz-nbE">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="4YY-5A-0Kc"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9x4-es-gdS" userLabel="ExerciseCompleteButton">
                                         <rect key="frame" x="68" y="117" width="188" height="65"/>
                                         <state key="normal" title="Complete">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -226,9 +235,12 @@
                                 <constraints>
                                     <constraint firstItem="9x4-es-gdS" firstAttribute="leading" secondItem="CQH-fu-YDf" secondAttribute="leading" constant="68" id="26p-xg-RNu"/>
                                     <constraint firstAttribute="bottom" secondItem="o4L-s5-PG4" secondAttribute="bottom" constant="135" id="6u6-ks-8zC"/>
+                                    <constraint firstAttribute="trailing" secondItem="16X-Oz-nbE" secondAttribute="trailing" id="76N-Ur-9Q5"/>
+                                    <constraint firstItem="16X-Oz-nbE" firstAttribute="leading" secondItem="CQH-fu-YDf" secondAttribute="leading" id="Pcj-he-zy0"/>
                                     <constraint firstItem="o4L-s5-PG4" firstAttribute="leading" secondItem="9x4-es-gdS" secondAttribute="trailing" constant="122" id="S0B-4s-Zox"/>
                                     <constraint firstItem="o4L-s5-PG4" firstAttribute="top" secondItem="CQH-fu-YDf" secondAttribute="top" constant="135" id="TaU-1m-GzA"/>
                                     <constraint firstItem="9x4-es-gdS" firstAttribute="top" secondItem="CQH-fu-YDf" secondAttribute="top" constant="117" id="bbh-Xv-kIR"/>
+                                    <constraint firstItem="16X-Oz-nbE" firstAttribute="top" secondItem="CQH-fu-YDf" secondAttribute="top" id="h9r-uX-Zl5"/>
                                     <constraint firstAttribute="trailing" secondItem="o4L-s5-PG4" secondAttribute="trailing" constant="174" id="jD5-6u-xBd"/>
                                     <constraint firstAttribute="bottom" secondItem="9x4-es-gdS" secondAttribute="bottom" constant="118" id="lS9-pG-9x7"/>
                                 </constraints>
@@ -247,6 +259,7 @@
                     <connections>
                         <outlet property="exerciseCancelButton" destination="o4L-s5-PG4" id="0Vz-IG-ddO"/>
                         <outlet property="exerciseCompleteButton" destination="9x4-es-gdS" id="XPX-mC-UrJ"/>
+                        <outlet property="exerciseDetailLabel" destination="16X-Oz-nbE" id="dEp-RQ-VX7"/>
                         <outlet property="exerciseNameLabel" destination="ITs-DB-or4" id="Coh-Vz-ksu"/>
                         <segue destination="E7u-x2-a5P" kind="show" identifier="showPlanCompletion" id="6tt-d2-RWK"/>
                     </connections>

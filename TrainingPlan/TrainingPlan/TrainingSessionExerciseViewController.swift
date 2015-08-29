@@ -11,6 +11,7 @@ import UIKit
 class TrainingSessionExerciseViewController: UIViewController {
     
     @IBOutlet weak var exerciseNameLabel : UILabel!
+    @IBOutlet weak var exerciseDetailLabel : UILabel!
     @IBOutlet weak var exerciseCompleteButton: UIButton!
     @IBOutlet weak var exerciseCancelButton: UIButton!
     
@@ -40,6 +41,7 @@ class TrainingSessionExerciseViewController: UIViewController {
     
     func configureView () {
         exerciseNameLabel.text = sessionExercise?.exerciseName
+        exerciseDetailLabel.text = sessionExercise?.exerciseDescription
     }
     
 }
