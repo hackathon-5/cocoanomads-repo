@@ -21,6 +21,14 @@
 		648A4F8B1B9141B900B78C2B /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 648A4F891B9141B900B78C2B /* Interface.storyboard */; };
 		648A4F8D1B9141B900B78C2B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 648A4F8C1B9141B900B78C2B /* Images.xcassets */; };
 		648A4F901B9141B900B78C2B /* TrainingPlan WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 648A4F731B9141B900B78C2B /* TrainingPlan WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D3F9D13B1B91441300F58CBA /* WTrainingPlanTableInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F9D13A1B91441300F58CBA /* WTrainingPlanTableInterfaceController.swift */; };
+		D3F9D13D1B91444100F58CBA /* WExerciseInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F9D13C1B91444100F58CBA /* WExerciseInterfaceController.swift */; };
+		D3F9D13F1B91445000F58CBA /* WPlanCompletionInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F9D13E1B91445000F58CBA /* WPlanCompletionInterfaceController.swift */; };
+		D3F9D1411B9145E000F58CBA /* WTrainingPlanTableRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F9D1401B9145E000F58CBA /* WTrainingPlanTableRow.swift */; };
+		D3F9D1431B91472700F58CBA /* WExerciseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F9D1421B91472700F58CBA /* WExerciseData.swift */; };
+		D3F9D1451B91479900F58CBA /* WTrainingPlanData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F9D1441B91479900F58CBA /* WTrainingPlanData.swift */; };
+		D3F9D1491B91523000F58CBA /* WTrainingPlanSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F9D1481B91523000F58CBA /* WTrainingPlanSession.swift */; };
+		D3F9D14B1B9155FE00F58CBA /* WExerciseSessionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F9D14A1B9155FE00F58CBA /* WExerciseSessionData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +91,14 @@
 		648A4F881B9141B900B78C2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		648A4F8A1B9141B900B78C2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		648A4F8C1B9141B900B78C2B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		D3F9D13A1B91441300F58CBA /* WTrainingPlanTableInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WTrainingPlanTableInterfaceController.swift; sourceTree = "<group>"; };
+		D3F9D13C1B91444100F58CBA /* WExerciseInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WExerciseInterfaceController.swift; sourceTree = "<group>"; };
+		D3F9D13E1B91445000F58CBA /* WPlanCompletionInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WPlanCompletionInterfaceController.swift; sourceTree = "<group>"; };
+		D3F9D1401B9145E000F58CBA /* WTrainingPlanTableRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WTrainingPlanTableRow.swift; sourceTree = "<group>"; };
+		D3F9D1421B91472700F58CBA /* WExerciseData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WExerciseData.swift; sourceTree = "<group>"; };
+		D3F9D1441B91479900F58CBA /* WTrainingPlanData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WTrainingPlanData.swift; sourceTree = "<group>"; };
+		D3F9D1481B91523000F58CBA /* WTrainingPlanSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WTrainingPlanSession.swift; sourceTree = "<group>"; };
+		D3F9D14A1B9155FE00F58CBA /* WExerciseSessionData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WExerciseSessionData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,7 +190,15 @@
 			isa = PBXGroup;
 			children = (
 				648A4F781B9141B900B78C2B /* InterfaceController.swift */,
+				D3F9D13A1B91441300F58CBA /* WTrainingPlanTableInterfaceController.swift */,
+				D3F9D13C1B91444100F58CBA /* WExerciseInterfaceController.swift */,
+				D3F9D13E1B91445000F58CBA /* WPlanCompletionInterfaceController.swift */,
+				D3F9D1401B9145E000F58CBA /* WTrainingPlanTableRow.swift */,
 				648A4F7A1B9141B900B78C2B /* NotificationController.swift */,
+				D3F9D1481B91523000F58CBA /* WTrainingPlanSession.swift */,
+				D3F9D14A1B9155FE00F58CBA /* WExerciseSessionData.swift */,
+				D3F9D1441B91479900F58CBA /* WTrainingPlanData.swift */,
+				D3F9D1421B91472700F58CBA /* WExerciseData.swift */,
 				648A4F7C1B9141B900B78C2B /* GlanceController.swift */,
 				648A4F7E1B9141B900B78C2B /* Images.xcassets */,
 				648A4F751B9141B900B78C2B /* Supporting Files */,
@@ -388,8 +412,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				648A4F7B1B9141B900B78C2B /* NotificationController.swift in Sources */,
+				D3F9D1491B91523000F58CBA /* WTrainingPlanSession.swift in Sources */,
+				D3F9D1451B91479900F58CBA /* WTrainingPlanData.swift in Sources */,
+				D3F9D13B1B91441300F58CBA /* WTrainingPlanTableInterfaceController.swift in Sources */,
+				D3F9D13D1B91444100F58CBA /* WExerciseInterfaceController.swift in Sources */,
+				D3F9D1411B9145E000F58CBA /* WTrainingPlanTableRow.swift in Sources */,
+				D3F9D14B1B9155FE00F58CBA /* WExerciseSessionData.swift in Sources */,
 				648A4F791B9141B900B78C2B /* InterfaceController.swift in Sources */,
+				D3F9D13F1B91445000F58CBA /* WPlanCompletionInterfaceController.swift in Sources */,
 				648A4F7D1B9141B900B78C2B /* GlanceController.swift in Sources */,
+				D3F9D1431B91472700F58CBA /* WExerciseData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -653,6 +685,7 @@
 				648A4F6B1B91418F00B78C2B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		648A4F6C1B91418F00B78C2B /* Build configuration list for PBXNativeTarget "TrainingPlanTests" */ = {
 			isa = XCConfigurationList;
@@ -661,6 +694,7 @@
 				648A4F6E1B91418F00B78C2B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		648A4F911B9141B900B78C2B /* Build configuration list for PBXNativeTarget "TrainingPlan WatchKit App" */ = {
 			isa = XCConfigurationList;
@@ -669,6 +703,7 @@
 				648A4F931B9141B900B78C2B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		648A4F941B9141B900B78C2B /* Build configuration list for PBXNativeTarget "TrainingPlan WatchKit Extension" */ = {
 			isa = XCConfigurationList;
@@ -677,6 +712,7 @@
 				648A4F961B9141B900B78C2B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

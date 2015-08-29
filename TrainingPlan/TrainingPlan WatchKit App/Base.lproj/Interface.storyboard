@@ -5,12 +5,43 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="7701"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
+        <!--Plan-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="TrainingPlan_WatchKit_App" customModuleProvider="target"/>
+                <controller identifier="WTrainingPlanTableIC" title="Plan" id="AgC-eL-Hgc" customClass="WTrainingPlanTableInterfaceController" customModule="TrainingPlan_WatchKit_Extension">
+                    <items>
+                        <table alignment="left" id="6lC-ia-zS3">
+                            <items>
+                                <tableRow identifier="TrainingPlanTableRowID" id="LU6-2V-lQJ" customClass="WTrainingPlanTableRow" customModule="TrainingPlan_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="38e-uY-Ben">
+                                        <items>
+                                            <label alignment="left" text="Label" id="6p0-5N-Quu"/>
+                                            <label alignment="right" text="Label" id="1Ge-GJ-gTW"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="statusLabel" destination="1Ge-GJ-gTW" id="Z7G-nI-42Z"/>
+                                        <outlet property="titleLabel" destination="6p0-5N-Quu" id="t2i-t2-3wM"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <menu key="menu" id="bqg-np-7Hd">
+                        <items>
+                            <menuItem title="Reset" icon="repeat" id="GH4-pY-DdE">
+                                <connections>
+                                    <action selector="onMenuReset" destination="AgC-eL-Hgc" id="P2f-7E-jaD"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                    <connections>
+                        <outlet property="table" destination="6lC-ia-zS3" id="932-QS-GRZ"/>
+                    </connections>
+                </controller>
             </objects>
-            <point key="canvasLocation" x="235" y="347"/>
+            <point key="canvasLocation" x="144" y="355"/>
         </scene>
         <!--Glance Interface Controller-->
         <scene sceneID="BOz-TT-tkC">
@@ -47,6 +78,37 @@
                 <controller id="gdX-wl-uQE" customClass="NotificationController" customModule="TrainingPlan_WatchKit_App" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="553" y="1001"/>
+        </scene>
+        <!--Exercise-->
+        <scene sceneID="5wU-EE-2U3">
+            <objects>
+                <controller identifier="WExerciseInterfaceControllerID" title="Exercise" id="m7Y-Dw-wlF" customClass="WExerciseInterfaceController" customModule="TrainingPlan_WatchKit_Extension">
+                    <items>
+                        <group width="1" height="0.59999999999999998" alignment="left" id="iVY-Pa-Ho6">
+                            <items>
+                                <label alignment="center" verticalAlignment="center" text="Label" id="4uH-Ct-cwd"/>
+                            </items>
+                        </group>
+                        <button width="1" alignment="left" verticalAlignment="bottom" title="Complete" id="aSn-5R-oxd">
+                            <connections>
+                                <action selector="onCompleteButton" destination="m7Y-Dw-wlF" id="oqu-Ua-n0d"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="completeButton" destination="aSn-5R-oxd" id="nkC-QW-2dC"/>
+                        <outlet property="exerciseLabel" destination="4uH-Ct-cwd" id="4tP-vS-t6D"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="325" y="355"/>
+        </scene>
+        <!--Completed-->
+        <scene sceneID="Go0-vX-4Pj">
+            <objects>
+                <controller identifier="WPlanCompletionIC" title="Completed" id="XnR-4v-iGx" customClass="WPlanCompletionInterfaceController" customModule="TrainingPlan_WatchKit_Extension"/>
+            </objects>
+            <point key="canvasLocation" x="506" y="355"/>
         </scene>
     </scenes>
 </document>
