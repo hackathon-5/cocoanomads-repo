@@ -12,14 +12,14 @@ import Foundation
 class WTeamData {
     
     var teamMemberList = [
-        WTeamMemberData(name: "Appleby McFriday"),
-        WTeamMemberData(name: "Chex Lemeneux"),
-        WTeamMemberData(name: "Jenny Fromdabloc"),
-        WTeamMemberData(name: "Krispy Kreme McDonalds"),
-        WTeamMemberData(name: "Martin Sugar"),
-        WTeamMemberData(name: "Ricky Spanish"),
-        WTeamMemberData(name: "Scotch Bingington"),
-        WTeamMemberData(name: "Tony Two Times")
+        WTeamMemberData(name: "Appleby McFriday", emoticon:"😁"),
+        WTeamMemberData(name: "Chex Lemeneux", emoticon:"😂"),
+        WTeamMemberData(name: "Jenny Fromdabloc", emoticon:"😃"),
+        WTeamMemberData(name: "Krispy Kreme McDonalds", emoticon:"😉"),
+        WTeamMemberData(name: "Martin Sugar", emoticon:"😋"),
+        WTeamMemberData(name: "Ricky Spanish", emoticon:"😍"),
+        WTeamMemberData(name: "Scotch Bingington", emoticon:"😡"),
+        WTeamMemberData(name: "Tony Two Times", emoticon:"😭")
     ]
     
     var teamMemberTotal:Int {

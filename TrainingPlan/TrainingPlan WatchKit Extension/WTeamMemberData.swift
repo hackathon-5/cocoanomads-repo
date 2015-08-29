@@ -11,8 +11,11 @@ import Foundation
 
 class WTeamMemberData {
     var name:String!
+    var emoticon:String!
     
-    init(name:String){
+    init(name:String, emoticon:String){
         self.name = name
+        self.emoticon = emoticon
+        
     }
 }

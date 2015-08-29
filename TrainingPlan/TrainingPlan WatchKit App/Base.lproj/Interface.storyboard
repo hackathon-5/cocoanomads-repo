@@ -125,7 +125,7 @@
                                 <tableRow identifier="TeamMemberTableRowID" id="D1U-bX-9pf" customClass="WTeamMemberTableRow" customModule="TrainingPlan_WatchKit_Extension">
                                     <group key="rootItem" width="1" alignment="left" id="5Py-cl-rag">
                                         <items>
-                                            <label alignment="left" text="Label" id="Hxl-Dt-iwu"/>
+                                            <label alignment="left" verticalAlignment="center" text="Label" id="Hxl-Dt-iwu"/>
                                         </items>
                                     </group>
                                     <connections>
@@ -156,9 +156,14 @@
             <objects>
                 <controller identifier="WTeamMemberDetailIC" title="Member" id="rDN-NL-Gzd" customClass="WTeamMemberDetailInterfaceController" customModule="TrainingPlan_WatchKit_Extension">
                     <items>
-                        <label alignment="center" verticalAlignment="center" text="Label" id="mTv-cC-wYM"/>
+                        <label alignment="center" text="Label" id="mTv-cC-wYM"/>
+                        <label alignment="center" text="Exercise Total: 5" id="n8u-06-XrK"/>
+                        <label alignment="center" text="😁" id="dEn-Aa-mmT">
+                            <fontDescription key="font" type="system" pointSize="80"/>
+                        </label>
                     </items>
                     <connections>
+                        <outlet property="emoticonLabel" destination="dEn-Aa-mmT" id="RSQ-bd-UK0"/>
                         <outlet property="nameLabel" destination="mTv-cC-wYM" id="eMm-pY-Pmt"/>
                     </connections>
                 </controller>

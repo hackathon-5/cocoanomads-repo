@@ -14,6 +14,8 @@ class WTeamMemberDetailInterfaceController: WKInterfaceController {
     
     @IBOutlet weak var nameLabel: WKInterfaceLabel!
     
+    @IBOutlet weak var emoticonLabel: WKInterfaceLabel!
+    
     var teamMemberData:WTeamMemberData!
     
     override func awakeWithContext(context: AnyObject?) {
@@ -27,6 +29,7 @@ class WTeamMemberDetailInterfaceController: WKInterfaceController {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
         nameLabel.setText(teamMemberData.name)
+        emoticonLabel.setText(teamMemberData.emoticon)
     }
     
     override func didDeactivate() {
