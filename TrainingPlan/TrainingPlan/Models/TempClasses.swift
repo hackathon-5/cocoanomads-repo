@@ -62,3 +62,40 @@ class TrainingSessionExercise {
         self.exerciseStatus = status
     }
 }
+
+
+class TeamMember {
+    var firstName: String
+    var lastName: String
+    var imageName: String
+    
+    init (firstName: String, lastName: String, imageName: String){
+        self.firstName = firstName
+        self.lastName = lastName
+        self.imageName = imageName
+    }
+}
+
+class Team {
+    var teamTitle: String
+    var teamMembers: [TeamMember]
+    
+    init (teamTitle: String, members: [TeamMember]) {
+        self.teamTitle = teamTitle
+        self.teamMembers = members
+    }
+    
+    class func sampleTeam() -> Team {
+        let team = Team (teamTitle: "Langley Falls Dynamos",
+            members: [TeamMember(firstName: "AppleBy", lastName: "McFriday", imageName: "appleby"),
+            TeamMember(firstName: "Chex", lastName: "Lemeneux", imageName: "chex"),
+            TeamMember(firstName: "Jenny", lastName: "Fromdabloc", imageName: "jenny"),
+            TeamMember(firstName: "Krispy Kreme", lastName: "McDonalds", imageName: "krispy"),
+            TeamMember(firstName: "Martin", lastName: "Sugar", imageName: "martin"),
+            TeamMember(firstName: "Ricky", lastName: "Spanish", imageName: "ricky"),
+            TeamMember(firstName: "Scotch", lastName: "Bingington", imageName: "scotch"),
+            TeamMember(firstName: "Tony", lastName: "TwoTimes", imageName: "tony"),
+            ])
+        return team
+    }
+}

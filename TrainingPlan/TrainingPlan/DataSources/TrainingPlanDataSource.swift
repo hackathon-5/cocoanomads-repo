@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 
-typealias TableViewCellConfigureBlock = (cell:UITableViewCell, item:AnyObject?) -> ()
+typealias TrainingPlanTableViewCellConfigureBlock = (cell:UITableViewCell, item:AnyObject?) -> ()
 
 protocol TrainingPlanDataSourceDelegate {
     func trainingPlanItemSelected(exercise:TrainingPlanExercise)
@@ -18,13 +18,13 @@ protocol TrainingPlanDataSourceDelegate {
 
 class TrainingPlanDataSource:NSObject, UITableViewDataSource,UITableViewDelegate {
     
-    var configureCellBlock:TableViewCellConfigureBlock?
+    var configureCellBlock:TrainingPlanTableViewCellConfigureBlock?
     var delegate: TrainingPlanDataSourceDelegate?
     
     var items: [AnyObject]
     var cellIdentifier: String
     
-    init(items: [AnyObject]!, cellIdentifier: String!, configureBlock: TableViewCellConfigureBlock) {
+    init(items: [AnyObject]!, cellIdentifier: String!, configureBlock: TrainingPlanTableViewCellConfigureBlock) {
         self.items = items
         self.cellIdentifier = cellIdentifier
         self.configureCellBlock = configureBlock

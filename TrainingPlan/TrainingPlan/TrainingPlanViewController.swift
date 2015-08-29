@@ -15,7 +15,7 @@ class TrainingPlanViewController: UIViewController,TrainingPlanDataSourceDelegat
     var planTitle: String
    
     @IBOutlet weak var tableView: UITableView!
-    var dataSource: TrainingPlanDataSource!
+    var planDataSource: TrainingPlanDataSource!
     
     var viewModel: TrainingPlanViewModel {
         didSet {
@@ -44,7 +44,7 @@ class TrainingPlanViewController: UIViewController,TrainingPlanDataSourceDelegat
         
         self.tableView.registerClass(TrainingPlanItemTableViewCell.self, forCellReuseIdentifier: trainingPlanItemCellIdentifier)
         
-        dataSource = TrainingPlanDataSource(items: TrainingPlan.sampleTrainingPlan().planExerciseList,
+        planDataSource = TrainingPlanDataSource(items: TrainingPlan.sampleTrainingPlan().planExerciseList,
             cellIdentifier: trainingPlanItemCellIdentifier,
             configureBlock: { (cell, item) -> () in
                 if let actualCell = cell as? TrainingPlanItemTableViewCell {
@@ -53,7 +53,7 @@ class TrainingPlanViewController: UIViewController,TrainingPlanDataSourceDelegat
                     }
                 }
         })
-        dataSource.delegate = self
+        planDataSource.delegate = self
         setupDatasource()
     }
 
@@ -62,7 +62,7 @@ class TrainingPlanViewController: UIViewController,TrainingPlanDataSourceDelegat
     }
     
     func setupDatasource() {
-        self.tableView.dataSource = dataSource
+        self.tableView.dataSource = planDataSource
         self.tableView.reloadData()
     }
     
@@ -71,14 +71,13 @@ class TrainingPlanViewController: UIViewController,TrainingPlanDataSourceDelegat
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let path = self.tableView.indexPathForSelectedRow()!
-        
-        if segue.identifier == "showSessionExercise" {
-            let sessionVC = segue.destinationViewController as! TrainingSessionExerciseViewController
-        // TODO: Assign a value to load the training session info
-
+        if let path = self.tableView.indexPathForSelectedRow() {
+            if segue.identifier == "showSessionExercise" {
+                let sessionVC = segue.destinationViewController as! TrainingSessionExerciseViewController
+                // TODO: Assign a value to load the training session info
+                
+            }
         }
     }
-    
 
 }

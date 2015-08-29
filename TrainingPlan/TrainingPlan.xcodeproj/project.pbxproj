@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6472617C1B91F96300C18E16 /* TeamMemberListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6472617B1B91F96300C18E16 /* TeamMemberListTableViewCell.swift */; };
+		6472617E1B91FA8A00C18E16 /* TeamMemberDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6472617D1B91FA8A00C18E16 /* TeamMemberDataSource.swift */; };
+		647261801B91FBE500C18E16 /* TeamMemberListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6472617F1B91FBE500C18E16 /* TeamMemberListViewController.swift */; };
+		647261821B91FC6900C18E16 /* TeamMemberListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647261811B91FC6900C18E16 /* TeamMemberListViewModel.swift */; };
 		648A4F501B91418F00B78C2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648A4F4F1B91418F00B78C2B /* AppDelegate.swift */; };
 		648A4F521B91418F00B78C2B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648A4F511B91418F00B78C2B /* ViewController.swift */; };
 		648A4F551B91418F00B78C2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 648A4F531B91418F00B78C2B /* Main.storyboard */; };
@@ -86,6 +90,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6472617B1B91F96300C18E16 /* TeamMemberListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamMemberListTableViewCell.swift; sourceTree = "<group>"; };
+		6472617D1B91FA8A00C18E16 /* TeamMemberDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamMemberDataSource.swift; sourceTree = "<group>"; };
+		6472617F1B91FBE500C18E16 /* TeamMemberListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamMemberListViewController.swift; sourceTree = "<group>"; };
+		647261811B91FC6900C18E16 /* TeamMemberListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamMemberListViewModel.swift; sourceTree = "<group>"; };
 		648A4F4A1B91418F00B78C2B /* TrainingPlan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrainingPlan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		648A4F4E1B91418F00B78C2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		648A4F4F1B91418F00B78C2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -282,6 +290,7 @@
 				648A4F9A1B91594800B78C2B /* TrainingPlanViewController.swift */,
 				648A4F9C1B91598B00B78C2B /* TrainingSessionExerciseViewController.swift */,
 				648A4F9E1B9159D500B78C2B /* TrainingSessionCompletionViewController.swift */,
+				6472617F1B91FBE500C18E16 /* TeamMemberListViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -293,6 +302,7 @@
 				648A4FA41B915D0900B78C2B /* TrainingPlanViewModel.swift */,
 				648A4FA61B915DA700B78C2B /* TrainingSessionExerciseViewModel.swift */,
 				648A4FA81B915DB500B78C2B /* TrainingSessionCompletionViewModel.swift */,
+				647261811B91FC6900C18E16 /* TeamMemberListViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -309,6 +319,7 @@
 			isa = PBXGroup;
 			children = (
 				648A4FAE1B9186D400B78C2B /* TrainingPlanDataSource.swift */,
+				6472617D1B91FA8A00C18E16 /* TeamMemberDataSource.swift */,
 			);
 			path = DataSources;
 			sourceTree = "<group>";
@@ -317,6 +328,7 @@
 			isa = PBXGroup;
 			children = (
 				648A4FB11B91B93300B78C2B /* TrainingPlanItemTableViewCell.swift */,
+				6472617B1B91F96300C18E16 /* TeamMemberListTableViewCell.swift */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -485,8 +497,10 @@
 				648A4F521B91418F00B78C2B /* ViewController.swift in Sources */,
 				648A4FA91B915DB500B78C2B /* TrainingSessionCompletionViewModel.swift in Sources */,
 				648A4FAC1B916A1000B78C2B /* TempClasses.swift in Sources */,
+				647261801B91FBE500C18E16 /* TeamMemberListViewController.swift in Sources */,
 				648A4FB21B91B93300B78C2B /* TrainingPlanItemTableViewCell.swift in Sources */,
 				648A4FA51B915D0900B78C2B /* TrainingPlanViewModel.swift in Sources */,
+				6472617E1B91FA8A00C18E16 /* TeamMemberDataSource.swift in Sources */,
 				648A4FA71B915DA700B78C2B /* TrainingSessionExerciseViewModel.swift in Sources */,
 				648A4FAF1B9186D400B78C2B /* TrainingPlanDataSource.swift in Sources */,
 				648A4F501B91418F00B78C2B /* AppDelegate.swift in Sources */,
@@ -494,6 +508,8 @@
 				648A4F9B1B91594800B78C2B /* TrainingPlanViewController.swift in Sources */,
 				648A4F9F1B9159D500B78C2B /* TrainingSessionCompletionViewController.swift in Sources */,
 				648A4F991B9158F400B78C2B /* TrainingPlanListViewController.swift in Sources */,
+				6472617C1B91F96300C18E16 /* TeamMemberListTableViewCell.swift in Sources */,
+				647261821B91FC6900C18E16 /* TeamMemberListViewModel.swift in Sources */,
 				648A4F9D1B91598B00B78C2B /* TrainingSessionExerciseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
