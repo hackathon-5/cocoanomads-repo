@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TrainingPlanViewController: UIViewController {
+class TrainingPlanViewController: UIViewController,TrainingPlanDataSourceDelegate {
     
     let trainingPlanItemCellIdentifier = "TrainingPlanItemCell"
     var exerciseList: [TrainingPlanExercise]
@@ -43,7 +43,7 @@ class TrainingPlanViewController: UIViewController {
         super.viewDidLoad()
         
         self.tableView.registerClass(TrainingPlanItemTableViewCell.self, forCellReuseIdentifier: trainingPlanItemCellIdentifier)
-
+        
         dataSource = TrainingPlanDataSource(items: TrainingPlan.sampleTrainingPlan().planExerciseList,
             cellIdentifier: trainingPlanItemCellIdentifier,
             configureBlock: { (cell, item) -> () in
@@ -52,8 +52,8 @@ class TrainingPlanViewController: UIViewController {
                         actualCell.configureForItem(actualItem)
                     }
                 }
-              
         })
+        dataSource.delegate = self
         setupDatasource()
     }
 
@@ -66,15 +66,19 @@ class TrainingPlanViewController: UIViewController {
         self.tableView.reloadData()
     }
     
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func trainingPlanItemSelected(exercise: TrainingPlanExercise) {
+        // navigate to Exercise Screen with selected exercise
     }
-    */
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let path = self.tableView.indexPathForSelectedRow()!
+        
+        if segue.identifier == "showSessionExercise" {
+            let sessionVC = segue.destinationViewController as! TrainingSessionExerciseViewController
+        // TODO: Assign a value to load the training session info
+
+        }
+    }
+    
 
 }

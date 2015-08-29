@@ -9,6 +9,11 @@
 import UIKit
 
 class TrainingSessionExerciseViewController: UIViewController {
+    var sessionExercise : TrainingSessionExercise? {
+        didSet {
+            self.configureView()
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +26,20 @@ class TrainingSessionExerciseViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    @IBAction func quit(sender:AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    @IBAction func complete(sender:AnyObject) {
+        
+    }
 
+    
+    func configureView () {
+        
+    }
+    
     /*
     // MARK: - Navigation
 
